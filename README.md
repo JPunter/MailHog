@@ -62,6 +62,15 @@ Check out how to [configure MailHog](/docs/CONFIG.md), or use the default settin
   * the HTTP server starts on port 8025
   * in-memory message storage
 
+#### Building the Docker image
+
+To build a multi arch docker image for MailHog, run the following command:
+(replace the Docker tags accordingly)
+
+```
+sudo docker-buildx build --platform linux/amd64,linux/arm64 --tag jcalonso/mailhog --tag jcalonso/mailhog:v1.0.1 --push .
+```
+
 ### Features
 
 See [MailHog libraries](docs/LIBRARIES.md) for a list of MailHog client libraries.
