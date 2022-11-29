@@ -68,7 +68,8 @@ To build a multi arch docker image for MailHog, run the following command:
 (replace the Docker tags accordingly)
 
 ```
-sudo docker-buildx build --platform linux/amd64,linux/arm64 --tag jcalonso/mailhog --tag jcalonso/mailhog:v1.0.1 --push .
+docker build --platform linux/arm64 --tag jpunter/go-mailhog --tag jpunter/go-mailhog:v1.0.0 .
+docker push jpunter/go-mailhog:v1.0.0
 ```
 
 ### Features
